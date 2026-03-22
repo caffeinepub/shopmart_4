@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 97%;
+    --foreground: 270 15% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 270 15% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 270 15% 10%;
+    --primary: 340 95% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 275 65% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 270 10% 94%;
+    --muted-foreground: 270 10% 45%;
+    --accent: 275 65% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 145 65% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 28 90% 55%;
+    --warning-foreground: 0 0% 100%;
+    --border: 270 10% 88%;
+    --input: 270 10% 88%;
+    --ring: 340 95% 58%;
+    --radius: 0.75rem;
+    /* OKLCH tokens */
+    --color-pink: 0.6 0.28 350;
+    --color-purple: 0.45 0.22 300;
+    --color-success: 0.6 0.2 145;
+    --color-warning: 0.7 0.18 50;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    background: linear-gradient(
+      135deg,
+      oklch(0.6 0.28 350),
+      oklch(0.45 0.22 300)
+    );
+  }
+
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      oklch(0.6 0.28 350),
+      oklch(0.45 0.22 300)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .category-ribbon {
+    background: linear-gradient(
+      90deg,
+      oklch(0.62 0.28 350),
+      oklch(0.52 0.25 320),
+      oklch(0.45 0.22 300)
+    );
+  }
+}
